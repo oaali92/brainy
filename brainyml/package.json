@@ -1,0 +1,18 @@
+{
+  "name": "brainyml",
+  "version": "1.0.0",
+  "description": "ML App!",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron ."
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/oaali92/brainy.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "electron": "^9.2.0"
+  }
+}
