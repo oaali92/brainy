@@ -2,7 +2,7 @@
   "name": "brainyml",
   "version": "1.0.0",
   "description": "ML App!",
-  "main": "main.js",
+  "main": "brainyml/main.js",
   "scripts": {
     "start": "electron ."
   },
