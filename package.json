@@ -14,5 +14,8 @@
   "license": "ISC",
   "devDependencies": {
     "electron": "^9.2.1"
+  },
+  "dependencies": {
+    "python-shell": "^2.0.1"
   }
 }

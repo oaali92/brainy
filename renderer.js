@@ -1,18 +1,16 @@
 function sendToPython() {
-    var python = require('child_process').spawn('python', ['brainyPython/calc.py', input.value]);
-    python.stdout.on('data', function (data) {
-        console.log('Python response: ', data.toString('utf8'));
-        result.textContent = data.toString('utf8');
-    });
+    var { PythonShell } = require('python-shell');
 
-    python.stderr.on('data', (data) => {
-        console.error(`sterr: ${data}`);
+    let options = {
+        mode: 'text',
+        args: [input.value]
+    };
+    
+    PythonShell.run('brainyPython/calc.py', options, function (err, results){
+        if (err) throw err;
+        console.log('results: ', results);
+        result.textContent = results[0]
     });
-
-    python.on('close', (code) => {
-        console.log(`child process exited with code ${code}`);
-    });
-
 }    
 
 btn.addEventListener('click', () => {
